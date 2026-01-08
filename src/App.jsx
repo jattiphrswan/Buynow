@@ -1,15 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import ProductDetails from './pages/ProductDetails';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
-import About from './pages/About';
-import ScrollToTop from './components/ScrollToTop';
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import About from "./pages/About";
+import ScrollToTop from "./components/ScrollToTop";
 
-// Simple ScrollToTop component to reset scroll on route change
 const ScrollToTopWrapper = () => {
   return <ScrollToTop />;
 };
