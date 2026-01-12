@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -9,26 +9,20 @@ import Checkout from "./pages/Checkout";
 import About from "./pages/About";
 import ScrollToTop from "./components/ScrollToTop";
 
-const ScrollToTopWrapper = () => {
-  return <ScrollToTop />;
-};
-
 function App() {
   return (
     <CartProvider>
-      <Router>
-        <ScrollToTopWrapper />
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="shop" element={<Shop />} />
-            <Route path="product/:id" element={<ProductDetails />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="checkout" element={<Checkout />} />
-            <Route path="about" element={<About />} />
-          </Route>
-        </Routes>
-      </Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="product/:id" element={<ProductDetails />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="about" element={<About />} />
+        </Route>
+      </Routes>
     </CartProvider>
   );
 }
